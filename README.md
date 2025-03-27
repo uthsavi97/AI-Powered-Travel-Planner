@@ -1,93 +1,72 @@
-# AI/ML Internship Assignment - AI-Powered Travel Planner
+# AI Travel Planner
 
-## Objective
-The goal of this assignment is to build an AI agent system that assists travelers by providing personalized travel plans and recommendations. The system should simulate a conversation to gather user preferences, curate relevant suggestions via web search, and generate a structured travel itinerary.
+## Overview
+AI Travel Planner is a **Streamlit** web application that helps users plan their trips by providing **personalized itineraries** based on their preferences. It utilizes **OpenAI's GPT-4** for refining user inputs and generating itineraries, and **Google Search API** for fetching travel recommendations.
 
-## Scenario
-You are developing an AI-powered travel planner that provides users with customized travel itineraries. Your task is to:
-- Prototype an AI-agentic system for this use case.
-- Develop prompts to facilitate user interactions.
-- Use a web-search tool to curate recommendations.
-- Generate a detailed travel itinerary.
-- Deploy your solution using a free hosting provider like Streamlit or Gradio.
+## Features
+- Extracts and refines user-provided travel details.
+- Fetches **real-time travel recommendations** using Google Search API.
+- Generates a **structured, personalized itinerary** based on user preferences.
+- Hosted on **Streamlit** for easy user interaction.
 
----
+## Tech Stack
+- **Python**
+- **Streamlit** (for UI)
+- **OpenAI API** (for AI-powered responses)
+- **Google Search API** (for travel recommendations)
+- **Requests, dotenv** (for API calls & environment management)
 
-## Task Instructions
-### **Step 1: Understand the User Context**
-1. Analyze user messages for key inputs:
-   - **Budget**
-   - **Trip Duration or Travel Dates**
-   - **Destination & Starting Location**
-   - **Purpose of Travel**
-   - **Preferences (e.g., adventure, relaxation, cultural, food, etc.)**
-2. Extract key details and:
-   - Chain prompts effectively to refine missing or unclear inputs.
-   - Generate a structured, day-by-day itinerary.
+## Installation
+### Prerequisites
+Ensure you have Python installed. Install dependencies using:
+```bash
+pip install streamlit openai requests python-dotenv
+```
 
-### **Step 2: Build Your Prompt System**
-1. **Input Refinement:**
-   - Create a system prompt to clarify user inputs such as:
-     - Dietary preferences.
-     - Specific interests.
-     - Walking tolerance or mobility concerns.
-     - Accommodation preferences (luxury, budget, central location, etc.).
-2. **Activity Suggestions:**
-   - Use a web-search tool to:
-     - Generate up-to-date recommendations for attractions, dining, and activities.
-     - Align suggestions with user preferences (e.g., “Hidden Gems”).
-3. **Itinerary Generation:**
-   - Once user preferences are confirmed, generate a structured multi-day itinerary with:
-     - Logical grouping and timing of sightseeing and activities.
-     - Recommendations for meals, transportation, and accommodations.
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/ai-travel-planner.git
+   cd ai-travel-planner
+   ```
+2. Create a **.env** file and add your API keys:
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   GOOGLE_API_KEY=your_google_api_key
+   ```
+3. Run the application:
+   ```bash
+   streamlit run app.py
+   ```
 
-### **Step 3: Deliverables**
-- Submit the final set of prompts used, categorized as:
-  - **System Prompt** (instructions given to the AI model)
-  - **User Prompt** (sample user inputs)
-  - **Model Response** (AI-generated output)
-- Provide sample inputs and outputs:
-  - A set of curated travel suggestions based on user inputs.
-  - A detailed, structured itinerary for a provided user scenario.
-- Document the reasoning behind each prompt and response strategy.
-- Host the application on a free hosting service (e.g., Streamlit, Gradio) and submit the live application link.
+## How It Works
+### 1. User Input Processing
+- Users enter their trip details in a text box.
+- The AI refines the input and ensures key details are captured (budget, destination, duration, etc.).
 
----
+### 2. Travel Recommendations
+- The app fetches **real-time travel recommendations** using Google Search API.
+- Results are structured and displayed in JSON format.
 
-## **Bonus Challenge (Optional)**
-Enhance the itinerary generation process by incorporating:
-- Flexible input handling (e.g., interpreting vague user preferences like "I have a moderate budget and want a mix of famous and offbeat places").
-- Intelligent prompt refinement to request clarifications when user inputs are incomplete or ambiguous.
+### 3. Itinerary Generation
+- The AI processes the refined input and generates a **day-by-day itinerary** with:
+  - Grouped activities
+  - Time slots
+  - Meals & breaks
+- The itinerary is displayed in a structured format.
 
----
+## Example Usage
+- **User Input:** "I want a luxury trip to Paris for 5 days with a focus on food and art."
+- **Refined Output:** Extracted key details and preferences.
+- **Recommendations:** Top Paris attractions for food and art lovers.
+- **Generated Itinerary:** Day-wise structured plan.
 
-## **Evaluation Criteria**
-1. **Prompt Design:**
-   - Are prompts clear, structured, and effective?
-   - Do they ensure meaningful and relevant AI responses?
-2. **Prompt Chaining:**
-   - Are prompts strategically structured to refine user inputs?
-   - Do they maintain a logical conversation flow?
-3. **Personalization:**
-   - How well does the output align with user preferences?
-   - Is the itinerary unique and relevant to the user?
-4. **Documentation:**
-   - Is the thought process well-documented and explained?
+## Deployment
+You can deploy the app on **Streamlit Cloud, Gradio, or Hugging Face Spaces.**
 
----
+## Contributing
+Feel free to fork the repository and contribute! 🚀
 
-## **Estimated Time Commitment**
-- **Prompt Design & Testing:** 3-4 hours
-- **AI Agent Development:** 3-4 hours
-- **Hosting Deployment:** 1-2 hours
-- **Documentation:** <1 hour
-
----
-
-## **Submission Guidelines**
-- Share the **final prompt set**, **sample outputs**, and **documentation**.
-- Provide a **live application link** for testing.
-- Ensure clear and structured documentation for evaluation.
-
-Good luck and happy coding!
+## License
+This project is licensed under the **MIT License**.
 
