@@ -62,11 +62,4 @@ streamlit run travel_planner.py
 - **Generated Itinerary:** Day-wise structured plan.
 
 ## Deployment
-You can deploy the app on **Streamlit Cloud, Gradio, or Hugging Face Spaces.**
-
-## Contributing
-Feel free to fork the repository and contribute! 🚀
-
-## License
-This project is licensed under the **MIT License**.
-
+deploy the app on **Streamlit Cloud**
