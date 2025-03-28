@@ -36,7 +36,7 @@ pip install streamlit openai requests python-dotenv
    ```
 3. Run the application:
    ```bash
-   streamlit run app.py
+streamlit run travel_planner.py  
    ```
 
 ## How It Works
